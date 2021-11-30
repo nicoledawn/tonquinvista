@@ -1,0 +1,29 @@
+.page-id-170 {
+    @media (min-width: 600px) {
+        .site-header {
+            position: relative;
+            background-color: $color__bg_green;
+        }
+    }
+}
+
+.page-id-170 .post-170 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.page-id-170 h1 {
+    text-align: center;
+}
+
+.page-id-170 .entry-content {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#wpsm_accordion_168 .wpsm_panel-body {
+    border-radius: 0px 0px 10px 10px;
+}

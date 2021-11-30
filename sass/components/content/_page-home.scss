@@ -1,0 +1,231 @@
+// COVID PLUGIN
+body .cnm_inner .cnm_h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+body .cnm_inner .cnm_txt {
+    font-size: 12px;
+}
+
+body .cnm_inner .cnm_btn {
+    font-size: 12px;
+    padding: 5px;
+}
+
+// INTRO SECTION
+#tonquin-logo {
+    width: 75px;
+    height: 75px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#home-intro {
+    padding: 25px 30px;
+    text-align: left;
+    font-weight: 200;
+}
+
+@media (min-width: $mq__tablet) {
+    #home-intro {
+        padding: 25px 60px;
+        font-size: 1.2em;
+    }
+}
+@media (min-width: $mq__desktop_small) {
+    #home-intro {
+        margin: 0 auto;
+        max-width: 1130px;
+        font-size: 1.5em;
+        text-align: center;
+    }
+}
+
+// CABIN SECTION
+
+#btn-cabins, #btn-experiences {
+    text-decoration: none;
+    background-color: $color__button;
+    padding: 10px;
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    width: 175px;
+    transition: .2s ease-in;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.page-id-68 h2 {
+    text-align: center;
+}
+@media (min-width: $mq__desktop_small) {
+    .page-id-68 h2 {
+        text-align: left;
+        font-size: 3rem;
+        padding-left: 10%;
+        margin-bottom: 20px;
+    }
+}
+
+.frame {
+    background-color: $color__bg_offwhite;
+    padding: 25px;
+    max-width: 500px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+@media (min-width: $mq__desktop_small) {
+    .frame {
+        position: relative;
+        max-width: 850px;
+        height: 500px;
+        padding: 50px;
+        padding-top: 25px;
+        margin-bottom: 150px; 
+    }
+    .frame-cabin {
+        margin-left: 8%;
+    }
+    .frame-experience {
+        margin-right: 8%;
+    }
+    .page-id-68 .attachment-large {
+        position: absolute;
+        bottom: -17%;
+        right: -10%; 
+        border-radius: 2px;
+        box-shadow: rgba(0, 0, 0, 0.25) -5px 14px 28px, rgba(0, 0, 0, 0.22) -5px 10px 10px;
+    }
+    .page-id-68 #title-experience {
+        margin-right: 10%;
+        text-align: right;
+    }
+    .page-id-68 #img-experience {
+        position: absolute;
+        bottom: -25%;
+        left: -10%;
+        box-shadow: rgba(0, 0, 0, 0.25) 5px 14px 28px, rgba(0, 0, 0, 0.22) 5px 10px 10px;
+    }
+    .page-id-68 #btn-experiences {
+        position: absolute;
+        right: 5%;
+    }
+    .cabin-experience-wrapper {
+        margin-bottom: 250px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .cabin-experience-wrapper {
+        position: relative;
+        margin-bottom: 400px;
+    }
+    #see-experiences {
+        position: absolute;
+        right: 3%;
+        top: 35%;
+    }
+    .frame-cabin {
+        margin-left: 3%;
+    }
+    .frame-experience {
+        margin-right: 2%;
+    }
+
+    #title-experience {
+        margin-top: 0;
+    }
+    #title-cabin {
+        padding-left: 5%;
+    }
+    .page-id-68 #img-cabin {
+        left: 11%;
+        bottom: -15%;
+    }
+    #btn-cabins {
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        z-index: 10;
+    }
+    .page-id-68 #img-experience {
+        left: 11%;
+        bottom: -23%;
+    }
+    #btn-experiences {
+        position: absolute;
+        bottom: -10%;
+        left: 55%;
+    }
+}
+
+@media (min-width: $mq__desktop_wide) {
+    .page-id-68 .sb_instagram {
+        width: 90%;
+    }
+}
+
+// INSTAGRAM SECTION 
+#instagram-container {
+    margin-bottom: 50px;
+}
+
+.sb_instagram_header {
+    padding: 10px;
+}
+
+.page-id-68 h3, .page-id-68 .sbi_bio {
+    color: $color__text_main;
+}
+
+.page-id-68.sbi_item.sbi_type_image:hover {
+    transition: .2s ease-in-out;
+}
+
+.sbi_photo_wrap:hover {
+    transition: .2s ease-in-out;
+    transform: scale(.98);
+}
+
+@media (min-width: $mq__desktop_small) {
+    .page-id-68 #instagram-container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (min-width: $mq__desktop_wide) {
+    .page-id-68 #instagram-container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+// TESTIMONIALS SECTION
+
+.testimonial {
+    @include testimonial-mobile; 
+}
+
+
+@media (min-width: $mq__tablet) {
+    .page-id-68 .testimonial {
+    @include testimonial-tablet;
+    }
+   
+}
+
+@media (min-width: $mq__desktop_small) {
+    .page-id-68 .testimonial {
+    @include testimonial-desktop; 
+    }
+   
+}
+

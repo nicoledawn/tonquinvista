@@ -1,0 +1,106 @@
+.page-id-12 {
+    @media (min-width: 600px) {
+        .site-header {
+            position: relative;
+            background-color: $color__bg_green;
+        }
+    }
+}
+
+.page-id-12 .post-12 a {
+    color: #182612;
+}
+
+.page-id-12 .input-text {
+    width: 100%;
+}
+
+.page-id-12 .entry-title {
+    font-size: 1.25rem;
+}
+
+.page-id-12 .site-main {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: $color__bg_offwhite;
+}
+
+.page-id-12 .post-12 {
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    background: #fff;
+}
+
+.page-id-12 .woocommerce-info {
+    background-color: #dbb00b;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 200;
+    color: $color__bg_offwhite;
+    list-style: none;
+    & a {
+        color: $color__bg_offwhite;
+        font-weight: 200;
+    }
+}
+
+.page-id-12 h3 {
+    background:  #b9bfb0;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.page-id-12 table dt {
+  border-bottom: 1px solid $color__main_accent;
+}
+
+.page-id-12 .product-name {
+    text-align: left;
+}
+
+.page-id-12 th.product-total {
+    text-align: right;
+}
+
+.page-id-12 .product-total .woocommerce-Price-amount {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.page-id-12 .tax-total th {
+    float: right;
+}
+
+.page-id-12 .wc_payment_methods.payment_methods.methods {
+    margin: 0;
+    padding: 0;
+}
+
+.page-id-12 .tax-total .woocommerce-Price-amount bdi {
+    float: right;
+}
+
+.page-id-12 #place_order {
+    border: none;
+}
+
+.page-id-12 .cart-subtotal th {
+    float: right;
+}
+
+.page-id-12 tfoot td .amount bdi {
+    float: right;
+}
+
+.page-id-12 tfoot .order-total th {
+    float: right;
+}
+
+
+
+
+
+
+			

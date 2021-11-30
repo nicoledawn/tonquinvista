@@ -1,0 +1,410 @@
+//  Single product page navigation in desktop
+.single-product {
+    @media (min-width: 600px) {
+        .site-header {
+            position: relative;
+            background-color: $color__bg_green;
+        }
+    }
+}
+
+.single-product {
+
+    .post-217 .entry-summary {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .wpgs-nav .slick-active img{
+        margin-left: auto;
+        margin-right: auto;
+    } 
+
+
+    .up-sells {
+        display: none;
+    }
+
+    article.testimonial {
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+
+
+    a {
+    text-align: center;
+    }
+    .site-main {
+        margin: .5rem;
+    }
+
+    .woocommerce-tabs ul.tabs li {
+        display: none;
+    }
+
+    .woocommerce-tabs .panel h2:first-of-type {
+        display: none;
+    }
+
+    
+    // Tab Navigation on Cabin Page
+    #amenities-rates {
+            
+        margin: 1rem auto;
+        
+        // Tabs on activites page for experience and explore
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+            margin: 0;
+            // margin-bottom: 1rem;
+            
+            li {
+                width: 50%;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            
+                a {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    padding: 1rem 0;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                    padding: 1rem 2rem;
+                    transition: all .3s ease-in-out;
+                    border-bottom: 1px solid transparent;
+                    font-size: 1.2em;
+                }
+
+                a.active {
+                    background-color: $color__active_tab;
+                }
+
+                &:nth-of-type(2) {
+                    a {
+                        padding: 1rem 3rem;
+                    }
+                }
+            }
+
+            li:not(.active) {
+                background-color: #182612ac;
+            }
+
+            li.active {
+                background-color: $color__active_tab;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+        
+        .tab-pane { 
+            display: none;
+        }
+        
+        .tab-pane.active { 
+            display: block; 
+        }
+
+        #amenities {
+            border-radius: 0 0 15px 15px;
+            
+            padding: 1rem 0;
+            padding-top: 100px;
+            margin-top: -100px;
+
+            h3 {
+                margin: 0;
+                padding-left: 1rem;
+                padding-top: .5rem;
+                background-color: $color__bg_offwhite;
+            }
+            
+            ul {
+                background-color: $color__bg_offwhite;
+                flex-direction: column;
+
+                .amenities-card-content {
+                    padding-left: 1rem;
+                
+                li {
+                    text-align: left;
+                    background-color: transparent;
+                    padding: .2rem;
+                    list-style: disc;
+                    display: list-item;
+                    margin-left: 1.2rem;
+                    width: 90%;
+
+                    }
+                }
+        }
+    }   
+
+        #rates {
+
+            border-radius: 0 0 15px 15px;
+          
+            padding: 1rem 0;
+            padding-top: 100px;
+            margin-top: -100px;
+            
+            .rates-table {
+                h3 {
+                    background-color: $color__bg_offwhite;
+                    margin: 0;
+                    padding: .5rem;
+                    width: 100%;
+                }
+                
+                table {
+                    background-color: $color__bg_offwhite;
+                    margin-left: auto;
+                    margin-right: auto ;
+                    padding: .5rem .5rem 2rem .5rem;
+                    text-align: left;
+                }
+            }
+
+        }        
+    }
+
+    div.product div.woocommerce-product-gallery {
+        float: none;
+    }
+
+    .button, .single-product .single_add_to_cart_button.button {
+        border: none;
+        @include button-mobile;
+        margin: 1rem auto;
+
+    }
+
+    .button.wc-bookings-booking-form-button {
+        @include button-mobile;
+        border: none;
+    }
+
+
+
+    .woocommerce-tabs ul.tabs {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .woocommerce-tabs ul.tabs .active a {
+        text-decoration: underline;
+    }
+
+    .woocommerce-tabs ul.tabs li a{
+        text-decoration: none;
+        color: $color__text_main; 
+        
+    }
+
+    ul.products li.product {
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    
+    }
+
+    article.testimonial {
+        @include testimonial-mobile;
+    
+        
+    }
+
+    ul.products li.product a {
+        text-decoration: none;
+        color: $color__text_main;
+    }
+
+
+    ul.products li.product a img {
+        margin-left: auto;
+        margin-right: auto ;
+    
+    }
+}
+
+@media (min-width: $mq__tablet) {
+
+    .single-product .post-217 .entry-summary{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    text-align: left;
+    
+        #call_for_credit {
+            grid-column: 1/2;
+                    grid-row: 1/2;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-self: center;
+            
+            .wc-sc-row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                
+
+                .wc-sc-label {
+                    padding-right: .5rem ;
+                    
+                    align-self: center;
+                }
+
+                .wc-sc-input {
+                    align-self: center;
+                }
+            }
+                
+
+              
+        }
+
+        .cart {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+           
+
+            .quantity {
+                align-self: center;
+                padding-right: .5rem;
+            }
+            
+        }
+
+        .woocommerce-tabs {
+            grid-column: 1/3;
+        }
+
+
+
+    }
+
+    .single-product {
+
+        
+
+        ul.products {
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            
+        }
+
+        ul.products.columns-4 li.product {
+            width: 100%;
+        }
+        
+        article.testimonial {
+            @include testimonial-tablet;
+            
+        }
+
+        .product-page-links {
+            margin-top: 2rem;
+            display: flex;
+            max-width: 70%;
+            margin-left:auto;
+            margin-right: auto;
+
+        }
+
+        .woocommerce-tabs ul.tabs {
+            justify-content: space-evenly;
+            max-width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .site-main {
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+    }
+    
+}
+
+@media (min-width: $mq__desktop_small) {
+
+    .single-product {
+
+        .site-main {
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+
+            article.testimonial {
+            @include testimonial-desktop;
+            }
+
+            .button.wc-bookings-booking-form-button {
+                @include button-desktop;
+                border: none;
+            }
+
+            .button, .single_add_to_cart_button {
+                @include button-desktop;
+                &:hover {
+                    color: #fff;
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width: $mq__desktop_wide) {
+
+    .single-product{
+
+        .site-main {
+            max-width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+// Styling for booking calendar
+
+#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a {
+    background-color: $color__bg_green !important;
+}
+
+#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.ui-datepicker-current-day a {
+    background-color: $color__main_accent !important; 
+} 
+
+#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable-range a {
+    background-color: $color__main_accent !important;
+}
+

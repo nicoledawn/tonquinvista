@@ -1,0 +1,78 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+// Testimonials Mixins 
+@mixin testimonial-mobile {
+
+	margin: 3rem auto;
+	background-color: $color__bg_offwhite;
+	border-radius: 10px;
+	padding: 1rem 1.5rem;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	max-width: 300px;
+
+	h4 {
+		display: none;
+	}
+
+	blockquote {
+		margin: 0;
+		text-align: center;
+	}
+
+	cite {
+		display: block;
+		text-align: center;
+		margin-top: 0.5rem;
+		font-weight: 600;
+		color: $color__main_accent;
+		font-size: 1.1em;
+	}
+}
+
+@mixin testimonial-tablet {
+	
+	max-width: 470px;
+}
+
+@mixin testimonial-desktop {
+	
+	max-width: 520px;
+    padding: 1rem 2rem;
+}
+
+// Button Mixins 
+@mixin button-mobile {
+	text-decoration: none;
+	color: #fff;
+	background-color: $color__button;
+	padding: 0.7rem 1.7rem;
+	border-radius: 30px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 135px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+@mixin button-desktop {
+	padding: 1rem 2rem;
+	font-size: 1.1em;
+	max-width: 160px;
+	transition: .3s;
+
+	&:hover {
+		transform: scale(1.05);
+		box-shadow: rgba(0, 0, 0, 0.13) 0px 14px 28px, rgba(0, 0, 0, 0.10) 0px 10px 10px;
+	}
+}

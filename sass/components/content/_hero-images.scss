@@ -1,0 +1,83 @@
+// Hero Image Styles - Mobile
+
+.hero-container {
+
+    position: relative;
+
+    h1 {
+
+        position: absolute;
+        text-align: center;
+        color: $color__tab_text;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 0 0.2rem;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        margin: auto;  
+        z-index: 10; 
+    }
+    
+    .hero-image-container {
+
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: top;
+            max-height: 100vh;
+        }
+
+        &:after {
+
+            content: '\A';
+            position: absolute;
+            width: 100%; height:100%;
+            top:0; left:0;
+            background:rgba(0,0,0,0.5);
+
+        }
+    }
+}
+
+// Hero image styles - Tablet
+@media screen and (min-width: $mq__tablet) {
+
+    .hero-container {
+
+        h1 {
+            font-size: 4em;
+            height: 110px;
+        }
+    }
+}
+
+// Hero image styles - Desktop (sm)
+@media screen and (min-width: $mq__desktop_small) {
+
+    .hero-container {
+
+        h1 {
+            font-size: 4.5em;
+        }
+    }
+}
+
+
+// Hero image styles - Desktop (lg)
+@media screen and (min-width: $mq__tablet) {
+
+    .hero-container {
+
+        h1 {
+            height: 160px;
+            font-size: 5em;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.page-id-43 {
+    @media (min-width: 600px) {
+        .site-header {
+            position: relative;
+            background-color: $color__bg_green;
+        }
+    }
+}
+
+.page-id-43 .post-43 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.page-id-43 h1 {
+    text-align: center;
+}
+
+// STYLING FOR EACH QUESTION TAB
+.page-id-43 #wpsm_accordion_39 .wpsm_panel-default > .wpsm_panel-heading {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .1s ease-in;
+    background-color: $color__bg_offwhite;
+}
+
+// STYLING FOR EACH ANSWER CONTAINER
+.page-id-43 #wpsm_accordion_39 .wpsm_panel-body {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px 0px 10px 10px;
+}
+
+// STYLING FOR BUTTON
+.page-id-43 .wp-block-button__link { 
+    @include button-mobile;
+        max-width: 175px;
+     
+    @media screen and (min-width: $mq__desktop_small) {
+        @include button-desktop;
+        max-width: 200px;
+    }
+}

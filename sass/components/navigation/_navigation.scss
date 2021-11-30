@@ -1,0 +1,690 @@
+.main-navigation {
+	display: block;
+	width: 100%;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			
+			border-top: 1px solid $color__bg_green;
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 9999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				
+
+				&:hover > ul,
+				&.focus > ul {
+					
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+		}
+
+		li.focus > ul,
+		li.active > ul,
+		li.hover > ul {
+			left: auto;
+			position: static;
+		}
+	}
+
+	li {
+		position: relative;
+		padding: 2rem 0;
+		width: 100%;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+
+}
+
+// Nav menu icon change 
+button.menu-toggle {
+
+	#open-icon {
+		display: block;
+	}
+
+	#close-icon {
+		display: none;
+	}
+}
+
+button.toggled {
+	#close-icon {
+		display: block;
+	}
+
+	#open-icon {
+		display: none;
+	}
+}
+
+// Tab Navigation on Single Cabin Page
+// ----------------------------------------------------------------------------------------------
+#amenities-rates{
+	
+	margin: 0 auto;
+  
+	ul {
+		list-style: none;
+		padding: 0;
+		
+		li {
+		display: inline-flex;
+		
+			a {
+				text-decoration: none;
+				color: darkgray;
+				padding: 10px;
+				transition: all .3s ease-in-out;
+				border-bottom: 1px solid transparent;
+				&:hover {
+				color: gray;
+				}
+			}
+		}
+	}
+	
+	.nav-tab-ul .active a{ 
+		color: $color__active_tab; 
+		
+		&:hover {
+			border-color: transparent;
+			background: $color__active_tab;
+			color: white;
+		}
+	}
+	
+	.tab-pane { 
+		display: none;
+	}
+	
+	.tab-pane.active { 
+		display: block; 
+	}
+}
+
+// MOBILE NAVIGATION & HEADER
+// ------------------------------------------------------------------------------------------
+.site-header {
+	background-color: $color__bg_green;
+	display: flex;
+	z-index: 9999;
+	justify-content: space-between;
+}
+
+#site-navigation {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.site-branding {
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+	justify-content: center;
+}
+
+@media (min-width: $mq__desktop_small){
+	.site-header {
+		position: relative;
+	}
+}
+
+.custom-logo {
+	width: 50px;
+	height: 50px;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+.site-title {
+	font-family: "megrim";
+	font-size: 1.15rem;
+	font-weight: 800;
+	text-transform: lowercase;
+	border-bottom: solid 2.5px $color__main_accent;
+	& a {
+		text-decoration: none;
+		color: $color__bg_offwhite;
+		padding-left: 0px;
+	}
+}
+
+body .menu-toggle {
+	background-color: transparent;
+	fill: white;
+	border: none;
+	padding-right: 25px;
+	padding-left: 0;
+	padding-bottom: 9px;
+
+	svg {
+		width: 30px;
+		height: 30px;
+	}
+} 
+
+
+
+.main-navigation {
+	width: 30%;
+}
+@media (min-width: 350px){
+	.main-navigation {
+		width: 36%;
+	}
+	.site-title {
+		font-size: 1.5em;
+	}
+}
+
+@media (min-width: 400px){
+	.main-navigation {
+		width: 40%;
+	}
+	
+}
+@media (min-width: 475px){
+	.main-navigation {
+		width: 50%;
+	}
+	
+}
+
+@media screen and (max-width: $mq__tablet) {
+	.main-navigation.toggled {
+		z-index: 9999;
+		.menu-header-menu-container {
+
+			direction: rtl;
+
+			#primary-menu {
+				min-height: 100vh;
+				overflow-y: scroll;
+				overflow-x: hidden;
+			}
+		}
+	}
+}
+
+.main-navigation.toggled #primary-menu {
+	transition: width 1s ease-in-out;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	max-height: 100vh;
+	z-index: 999;
+	background-color: $color__bg_offwhite;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-top: 4rem;
+	align-items: left;
+	padding-left: 40px;
+	border-right: 1px solid	rgba(52, 51, 51, 0.201);
+	
+	li a {
+		color: $color__text_main;
+		font-size: 1.25rem;
+		transition: .2s ease-in;
+		font-weight: 200;
+		width: 95%;
+		text-align: left;
+		&:hover {
+			color: $color__main_accent;
+		}
+	}
+}
+
+// SUBMENU 
+.main-navigation ul ul {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border-radius: 0px 0px 5px 5px;
+
+	li.active {
+		left: auto;
+		position: static;
+	}
+}
+
+
+
+#menu-item-240 a::before {
+	color: $color__text_main;
+    content: '\2193';
+	margin-left: 0.5rem;
+}
+
+#menu-item-240 .sub-menu a::before {
+	
+	content: none;
+}
+
+#menu-item-240 .sub-menu li {
+	
+	border-bottom: 1px solid rgba(52, 51, 51, 0.201);
+}
+
+
+
+.sub-menu .menu-item a {
+	font-size: 1rem;
+	text-align: left;
+}
+
+
+// STYLES AT FIRST TABLET BREAKPOINT
+@media screen and (min-width: $mq__tablet) {
+
+	.main-navigation ul {
+		display: flex;
+	}
+
+	#menu-item-240 a::before {
+		content: none;
+	}
+
+	.main-navigation ul ul {
+
+		a {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			font-size: 1rem;
+			padding-left: 5px;
+	
+			&:hover {
+				border-radius: 0px 0px 10px 0px;
+				transition: .25s ease-in-out;
+				background-color: #637368af;
+				transform: translateX(20px) !important;
+			}
+		}
+	}
+
+	.main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul {
+		position: absolute;
+		z-index: 20;
+	}
+
+	.main-navigation li {
+
+		width: unset;
+		a {
+			text-align: left;
+		}
+	}
+
+	li:hover > ul,
+	li.focus > ul {
+		left: auto;
+		position: static;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.site-branding {
+		padding-top: 20px;
+	}
+
+
+	.shop-icon a svg {
+		fill: #fff;
+		width: 27px;
+		margin-right: 20px;
+		height: auto;
+		background: $color__main_accent;
+		border-radius: 15px;
+		transition: .5s ease-in-out;
+		padding: 3px;
+		&:hover {
+			background: $color__bg_offwhite;
+			fill: $color__bg_green;
+			padding: 5px;
+		}
+	}
+
+	.main-navigation.toggled #primary-menu {
+		position: relative;
+		min-height: unset;
+		background-color: transparent;
+		flex-direction: row;
+		width: 100%;
+		padding-top: 0;
+		display: flex;
+		border-right: none;
+		justify-content: flex-start;
+    	align-items: center;
+
+		li a {
+			color: white;
+			text-transform: uppercase;
+			font-size: calc(0.85rem + .5vw);
+			transition: 0.2s ease-in-out;
+			font-weight: 400;
+			width: 100%;
+		}
+	}
+
+	.main-navigation ul ul {
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	}
+
+	.main-navigation li {
+		padding: 0;
+	}
+
+	#menu-item-240 a:after {
+		color: $color__text_main;
+	   content: none;
+	}
+
+	.main-navigation ul ul {
+		padding-left: 0px;
+		padding-right: 10px;
+		background-color: #1826129e;
+		
+	}
+	.main-navigation ul ul a {
+		padding-left: 0px;
+		backdrop-filter: blur(1px);
+	}
+	.custom-logo {
+		margin-right: 10px;
+		margin-bottom: -2px;
+	}
+	.site-header {
+		position: absolute;
+		width: 100%;
+		background: transparent; 
+	}
+
+	.main-navigation {
+		width: 65%;
+	}
+
+	.site-title a {
+		color: white;
+	}
+
+	.sub-menu .menu-item a {
+		font-size: 1rem;
+		text-align: left;
+	}
+	.site-title {
+		font-size: 1.85rem;
+		font-weight: 800;
+		white-space: nowrap;
+	}
+	.nav-menu {
+		padding-right: 0px;
+	}
+	.menu-header-menu-container .nav-menu a {
+		color: white;
+		padding-left: 15px;
+		text-transform: uppercase;
+		font-size: 1.1rem;
+		font-weight: 400;
+		padding-top: 20px;
+
+		&:active {
+			color: $color__main_accent;
+		}
+	}
+}
+
+
+@media (min-width: $mq__desktop_small) {
+
+	.site-branding {
+		padding-top: 10px;
+	}
+
+	.site-title {
+		font-size: 2rem;
+		font-weight: 800;
+	}
+
+	.shop-icon a svg {
+		width: 40px;
+	}
+
+	.menu-header-menu-container {
+		padding-right: 25px;
+	}
+	.menu-header-menu-container .nav-menu a {
+		padding-left: 40px;
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		font-weight: 400;
+		padding-top: 10px;
+
+		&:hover {
+			color: $color__main_accent;
+			transform: scale(1.05);
+			transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+		}
+	}
+
+	.sub-menu .menu-item a {
+		font-size: 1.15rem;
+	}
+	.custom-logo {
+		margin-left: 10px;
+		width: 80px;
+		height: 80px;
+		margin-bottom: -2px;
+	}
+}
+
+@media (min-width: $mq__desktop_wide) {
+
+	.site-branding {
+		padding-top: 0px;
+	}
+
+	.site-title {
+		font-size: 3rem;
+		font-weight: 800;
+	}
+	.custom-logo {
+		margin-left: 50px;
+		width: 100px;
+		height: 100px;
+	}
+	.menu-header-menu-container {
+		padding-right: 75px;
+	}
+	.menu-header-menu-container .nav-menu a {
+		padding-left: 40px;
+		text-transform: uppercase;
+		font-size: 1.75rem;
+		font-weight: 400;
+		padding-top: 0px;
+	}
+	.sub-menu .menu-item a {
+		font-size: 1.25rem;
+	}
+	.main-navigation {
+		width: 72%;
+	}
+}
+
+// FOOTER SECTION
+// -------------------------------------------------------------------
+.site-footer {
+	background-color: $color__bg_green;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: $color__tab_text;
+	& a {
+		color: $color__tab_text;
+	}
+	& p {
+		color: $color__tab_text;
+	}
+}
+
+// SOCIAL MENU
+// ------------------------------------------------------------------
+#menu-social-media-menu {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	fill: $color__tab_text;
+	& svg {
+		width: 35px;
+		height: 35px;
+		margin-left: 10px;
+		margin-right: 10px;
+		transition: .2s ease-in-out;
+		&:hover {
+			fill: $color__main_accent
+		}
+	}
+}
+
+@media (min-width: $mq__desktop_small) {
+	#menu-social-media-menu {
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 6%;
+	}
+	#menu-social-media-menu svg {
+		margin-left: 20px;
+		margin-right: 20px; 
+		width: 40px;
+		height: 40px; 
+	}
+}
+
+// NEWSLETTER SECTION
+// ------------------------------------------------------------------
+@media (min-width: $mq__desktop_small) {
+	form.mailpoet_form.mailpoet_form_form.mailpoet_form_php {
+		max-width: 1000px;
+		margin-left: 50%;
+		margin-right: 5%;
+	}
+}
+
+.mailpoet_submit:active {
+	transition: .2s ease-in;
+	transform: scale(.95);
+}
+
+.mailpoet_submit:hover {
+	transition: .2s ease-in;
+	background-color: $color__bg_offwhite;
+}
+
+
+// FOOTER NAV MENU 
+// ------------------------------------------------------------------
+#menu-footer-menu {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 10px 0px 25px 0px;
+	transition: .2s ease-in-out;
+	& li a {
+		text-decoration: none;
+		padding: 5px 0px 10px 0px;
+		&:hover {
+			color: $color__main_accent;
+		}
+	}
+}
+
+@media (min-width: $mq__tablet) {
+	#menu-footer-menu li a {
+		font-size: 20px;
+	}
+}
+
+
+@media (min-width: $mq__desktop_small) {
+	.site-footer {
+		position: relative;
+	}
+	
+	#menu-footer-menu {
+		align-items: flex-start;
+		position: absolute;
+		top: 10%;
+		left: 6%;
+		z-index: 3;
+		& li {
+			padding-bottom: 10px;
+		}
+		& li a {
+			font-size: 1.25rem;
+		}
+	}
+}
+
+.site-info {
+	text-align: center;
+}
+

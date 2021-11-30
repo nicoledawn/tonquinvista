@@ -1,0 +1,54 @@
+.error404 {
+    @media (min-width: 600px) {
+        .site-header {
+            position: relative;
+            background-color: $color__bg_green;
+        }
+    }
+}
+
+.page-id-335 .site-main {
+    padding: 50px;
+}
+
+.page-id-335 .entry-title {
+    text-align: center;
+}
+
+.page-id-335 .has-text-align-center {
+    padding-left: 50px;
+    padding-right: 50px; 
+    font-weight: 400;
+}
+
+.has-text-align-center a {
+    color: $color__text_main;
+    transition: .2s ease-in-out;
+    &:hover {
+        color: $color__main_accent;
+    }
+}
+
+.page-id-335 .wp-block-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+.wp-block-search__button-outside.wp-block-search__text-button.wp-block-search {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px; 
+}
+
+.page-id-335 .wp-block-search__button {
+    border: none;
+    background-color: $color__main_accent;
+    transition: .2s ease-in;
+    &:active {
+        transform: scale(.95); 
+    }
+}

@@ -1,0 +1,88 @@
+.page-id-125 h2 {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 45rem;
+}
+
+// Link to about page
+.page-id-125 .site-main a {
+
+   @include button-mobile;
+   max-width: 200px;
+
+   @media screen and (min-width: $mq__desktop_small) {
+       @include button-desktop;
+       max-width: 210px;
+   }
+}
+
+.page-id-125 #contact-address {
+    text-align: center;
+} 
+
+.page-id-125 label {
+    text-align: left;
+}
+
+.page-id-125 .wpcf7 input, .page-id-125 .wpcf7 textarea {
+    width: 100%;
+    border: 1px solid rgba(211, 211, 211, 0.475);
+    transition: .2s ease-in-out;
+}
+
+.contact-form-container {
+    background-color: #f1f2e9d6;
+    padding-top: 25px;
+    padding-bottom: 100px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: .2s ease-in-out;
+    &:focus-within {
+        box-shadow: 0px 0.2em 2.5em #c4c4c4;
+        transform: scale(1.025);
+    }
+}
+
+@media (min-width: $mq__tablet) {
+    .contact-form-container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 100px;
+        padding-right: 100px;
+        background-color: #f1f2e984;
+        max-width: 1000px;
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: $mq__desktop_small) {
+    .contact-form-container {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+
+// form submit button
+.wpcf7-form-control.has-spinner.wpcf7-submit {
+  @include button-mobile;
+  &:active {
+    &:active {
+        transform: scale(0.95);
+    }
+  }
+}
+
+@media (min-width: $mq__tablet) {
+    .wpcf7-form-control.has-spinner.wpcf7-submit {
+        @include button-desktop;
+        max-width: 200px;
+        float: right;
+    }
+}

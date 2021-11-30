@@ -1,0 +1,73 @@
+body.login {
+    background-color: #637368;
+}
+
+#login h1 a, .login h1 a {
+    padding-bottom: 0px;
+    transition: .5s ease-in-out;
+}
+
+.login h1 a {
+    text-indent: 0px;
+    color: #bcb00b;
+    padding-top: 100px;
+    margin-bottom: 0px;
+    text-transform: lowercase;
+    font-family: "megrim";
+    font-size: 2.5rem;
+    font-weight: 600;
+    width: auto;
+    background-size: 200px;
+    padding-bottom: 0px;
+}
+
+#login h1 a {
+    font-weight: 800;
+}
+
+#login h1 a:hover {
+    transition: .2s ease-in-out;
+    color: white;
+    letter-spacing: 5px;
+}
+
+
+body.login div#login form#loginform {
+    background-color: #f1f2e9;
+}
+
+.login #nav a, .login #backtoblog a {
+    color: white;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+    background: #dbb00b;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+    transform: scale(1.05);
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:active {
+    transform: scale(.95);
+}
+
+body.login div#login form#loginform {
+    transition: .2s ease-in-out;
+    border: none;
+    margin-bottom: 25px;
+}
+
+body.login div#login form#loginform:focus-within {
+    transition: .5s ease-in-out;
+    box-shadow: 0px 0.2em 1em #dbb00b;
+    transform: scale(1.025);
+    outline-style: none;
+}
+
+body.login div#login form#loginform input {
+    border: 1px solid rgba(211, 211, 211, 0.454);
+    outline-style: none;
+}
